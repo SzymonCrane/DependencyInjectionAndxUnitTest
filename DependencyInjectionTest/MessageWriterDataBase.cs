@@ -8,6 +8,11 @@ namespace DependencyInjectionTest
 {
     public class MessageWriterDataBase : IMessageWriter
     {
+        public string GetText(string message)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Write(string message)
         {
             Console.WriteLine(message + " This is message writer database");

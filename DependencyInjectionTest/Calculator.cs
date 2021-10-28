@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace DependencyInjectionTest
 {
-    public interface IMessageWriter
+    public class Calculator
     {
-        void Write(string message);
-        string GetText(string message);
+        public int Add(int numberOne, int numberTwo)
+        {
+            return numberOne + numberTwo;
+        }
     }
 }

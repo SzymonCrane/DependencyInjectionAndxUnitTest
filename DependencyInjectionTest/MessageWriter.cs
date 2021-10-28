@@ -12,5 +12,9 @@ namespace DependencyInjectionTest
         {
             Console.Write(message+" This is message writer");
         }
+        public string GetText(string message)
+        {
+            return Console.ReadLine() + message;
+        }
     }
 }

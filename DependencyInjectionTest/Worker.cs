@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DependencyInjectionTest
 {
-    public class Worker
+    public class Worker : IWorker
     {
         private readonly IMessageWriter messageWriter;
 
@@ -18,6 +18,9 @@ namespace DependencyInjectionTest
         {
             messageWriter.Write(message);
         }
-        
+        public string GetText(string message)
+        {
+            return messageWriter.GetText(message) + message;
+        }
     }
 }
